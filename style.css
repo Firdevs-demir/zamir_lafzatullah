@@ -1,53 +1,39 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fefefe;
-  text-align: center;
-  padding: 30px;
-}
-
-h1 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.not {
-  color: #666;
-  font-size: 16px;
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
 .container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  border: 2px solid #ccc;
-  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: stretch;
   padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.word-box {
   background-color: #fafafa;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
-  max-width: 150px;
+  border-radius: 8px;
+  padding: 2px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;  /* önemli: grid hücresini doldurur */
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #bbb;
+.word-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.word-box img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
+  margin: 0;
 }
 
-/* Aktiflik efekti */
-.card.active {
-  border-color: #28a745;
-  box-shadow: 0 0 15px #28a745aa;
-  transform: scale(1.1);
+.word-box p {
+  margin: 2px 0 0 0;
+  font-size: 1.2rem;
+  color: #333;
 }
