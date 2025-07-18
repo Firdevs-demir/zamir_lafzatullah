@@ -1,77 +1,51 @@
-/* Genel sayfa ayarı */
 body {
+  margin: 0;
+  padding: 30px;
   font-family: Arial, sans-serif;
   background-color: #fefefe;
   text-align: center;
-  padding: 30px;
-  margin: 0;
 }
 
-/* Başlık ve açıklamalar */
-h1 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.not {
-  color: #666;
-  font-size: 16px;
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
-/* Kutuların bulunduğu alan - GRID ile */
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  grid-template-columns: repeat(4, 1fr); /* Her zaman 4 sütun */
   gap: 10px;
-  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0;
-}
-
-/* Her kelime kutusu */
-.card {
-  width: 100%;
-  max-width: 180px;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 4px; /* iç boşluk az - metin boğulmasın */
-  background-color: #fafafa;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
   box-sizing: border-box;
 }
 
-/* Hover efekti */
+.card {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 2px solid #ccc;
+  width: 100%;
+  max-width: none; /* Kutu genişliği kısıtlaması kaldırıldı */
+  margin: 0 auto;
+}
+
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #bbb;
 }
 
-/* Görsel (PNG) */
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   display: block;
+  border-radius: 8px;
+  margin: 0;
 }
 
-/* Aktif hale geldiğinde efekt */
-.card.active {
-  border-color: #28a745;
-  box-shadow: 0 0 15px #28a745aa;
-  transform: scale(1.1);
+.card p {
+  margin: 5px 0 0 0;
+  font-size: 1.2rem;
+  color: #333;
 }
 
-/* Mobil uyum için */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr); /* küçük ekranda 2 sütun */
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    grid-template-columns: repeat(3, 1fr); /* tabletlerde 3 sütun */
-  }
-}
+/* Mobil veya dar ekran için özel düzenleme yok - hep 4 sütun */
