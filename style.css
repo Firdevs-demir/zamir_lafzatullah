@@ -38,3 +38,11 @@
   font-size: 0.5rem;
   color: #333;
 }
+.info-text {
+  font-size: 0.6rem; /* Ya da istediğin değer */
+  color: #333;
+  max-width: 640px;
+  margin: 20px auto;
+  text-align: left;
+  line-height: 1.5;
+}
