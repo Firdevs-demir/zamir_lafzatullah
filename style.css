@@ -1,23 +1,24 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
   gap: 12px;
   justify-items: center;
   align-items: stretch;
   padding: 10px;
-  max-width: 640px;
+  max-width: 640px; /* toplam genişlik */
   margin: 0 auto;
 }
 
 .word-box {
   background-color: #fafafa;
   border-radius: 8px;
-  padding: 2px;
+  padding: 4px;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
-  width: 100%;  /* önemli: grid hücresini doldurur */
+  width: 100%;        /* hücreyi tam kaplasın */
+  aspect-ratio: 1/1;  /* kare kutu (opsiyonel) */
 }
 
 .word-box:hover {
