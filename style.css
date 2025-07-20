@@ -17,7 +17,7 @@
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
-  width: 100%;        /* hücreyi tam kaplasın */
+  width: 25%;        /* hücreyi tam kaplasın */
   aspect-ratio: 1/1;  /* kare kutu (opsiyonel) */
 }
 
@@ -27,7 +27,7 @@
 }
 
 .word-box img {
-  width: 100%;
+  width: 25%;
   height: auto;
   display: block;
   margin: 0;
